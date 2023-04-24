@@ -4,22 +4,30 @@
         "ulaskaraoz"
     ],
     "contact": "",
-    "categories": ["active"],
+    "categories": ["active", "annotation"],
     "widgets": {
         "input": null,
         "output": null
     },
     "parameters": [ 
         {
-            "id": "parameter_1",
-            "optional": true,
+            "id": "assembly_input_ref",
+            "optional": false,
             "advanced": false,
             "allow_multiple": false,
             "default_values": [ "" ],
             "field_type": "text",
             "text_options": {
-                "valid_ws_types": [ ]
+                "valid_ws_types": [ "KBaseGenomeAnnotations.Assembly", "KBaseSets.AssemblySet" ]
             }
+        },
+        {
+            "id": "desc",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text"
         }
     ],
     "behavior": {
@@ -35,8 +43,12 @@
                     "narrative_system_variable": "workspace_id",
                     "target_property": "workspace_id"
                 },{
-                    "input_parameter": "parameter_1",
-                    "target_property": "parameter_1"
+                    "input_parameter": "assembly_input_ref",
+                    "target_property": "assembly_input_ref",
+                    "target_type_transform": "resolved-ref"
+                },{
+                    "input_parameter": "desc",
+                    "target_property": "desc"
                 }
             ],
             "output_mapping": [
