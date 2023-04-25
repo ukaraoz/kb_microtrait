@@ -53,7 +53,7 @@ class kb_microtraitTest(unittest.TestCase):
             print('Test workspace was deleted')
 
     # NOTE: According to Python unittest naming rules test method names should start from 'test'. # noqa
-    def test_your_method(self):
+    def test_run_kb_microtrait_test(self):
         # Prepare test objects in workspace if needed using
         # self.getWsClient().save_objects({'workspace': self.getWsName(),
         #                                  'objects': []})
@@ -63,5 +63,9 @@ class kb_microtraitTest(unittest.TestCase):
         #
         # Check returned data with
         # self.assertEqual(ret[...], ...) or other unittest methods
-        ret = self.serviceImpl.run_kb_microtrait(self.ctx, {'workspace_name': self.wsName,
-                                                             'parameter_1': 'Hello World!'})
+        #ref = "70614/81/1"
+        ref = "70614/89/1"
+        params = {'workspace_name': self.wsName,
+                  'assembly_input_ref': ref,
+                  'desc': "70614/89/1"}
+        ret = self.serviceImpl.run_kb_microtrait(self.ctx, params)

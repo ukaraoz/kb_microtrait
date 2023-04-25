@@ -2,7 +2,6 @@
 #BEGIN_HEADER
 import logging
 import os
-import subprocess
 
 from installed_clients.KBaseReportClient import KBaseReport
 from installed_clients.WorkspaceClient import Workspace as workspaceService
@@ -83,16 +82,15 @@ class kb_microtrait:
             for fasta_filepath in fasta_filepaths:
                 f.write(fasta_filepath)
 
-        #microtrait_cmd = [hmmer_search_bin]
         #report = KBaseReport(self.callback_url)
         #report_info = report.create({'report': {'objects_created':[],
         #                                        'text_message': params['parameter_1']},
         #                                        'workspace_name': params['workspace_name']})
-        print(microtrait_infile, "\n")
+        
         output = {
             #'report_name': report_info['name'],
             #'report_ref': report_info['ref'],
-            'report_name': microtrait_infile,
+            'report_name': "a",
             'report_ref': "b",
         }
         #END run_kb_microtrait

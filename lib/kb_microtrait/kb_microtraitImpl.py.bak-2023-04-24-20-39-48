@@ -2,7 +2,6 @@
 #BEGIN_HEADER
 import logging
 import os
-import subprocess
 
 from installed_clients.KBaseReportClient import KBaseReport
 from installed_clients.WorkspaceClient import Workspace as workspaceService
@@ -76,23 +75,19 @@ class kb_microtrait:
         # get files
         assemblies = assembly_util.get_fastas({'ref_lst': [params['assembly_input_ref']]})
         # would paths ever have more than one thing?
-        fasta_filepaths = [assembly_data['paths'][0] for assembly_ref, assembly_data in assemblies.items()]
-
-        microtrait_infile = os.path.join(self.shared_folder, 'fasta_filepaths.txt')
-        with open(microtrait_infile, 'w') as f:
-            for fasta_filepath in fasta_filepaths:
-                f.write(fasta_filepath)
-
-        #microtrait_cmd = [hmmer_search_bin]
+        fasta_locs = [assembly_data['paths'][0] for assembly_ref, assembly_data in assemblies.items()]
+        
+        for index, fasta_file in enumerate(fasta_locs):
+            print(index, fasta_file)
         #report = KBaseReport(self.callback_url)
         #report_info = report.create({'report': {'objects_created':[],
         #                                        'text_message': params['parameter_1']},
         #                                        'workspace_name': params['workspace_name']})
-        print(microtrait_infile, "\n")
+        
         output = {
             #'report_name': report_info['name'],
             #'report_ref': report_info['ref'],
-            'report_name': microtrait_infile,
+            'report_name': "a",
             'report_ref': "b",
         }
         #END run_kb_microtrait

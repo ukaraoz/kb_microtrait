@@ -1,5 +1,5 @@
-FROM kbase/sdkbase2:python
-MAINTAINER KBase Developer
+FROM ulaskaraoz/kb_microtrait
+MAINTAINER Ulas Karaoz <ukaraoz@lbl.gov>
 # -----------------------------------------
 # In this section, you can install any system dependencies required
 # to run your App.  For instance, you could place an apt-get update or
