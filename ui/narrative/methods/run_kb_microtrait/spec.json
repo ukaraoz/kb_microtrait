@@ -11,14 +11,21 @@
     },
     "parameters": [ 
         {
-            "id": "parameter_1",
+            "id": "input_ref",
             "optional": true,
             "advanced": false,
             "allow_multiple": false,
-            "default_values": [ "" ],
+            "default_values": [ 
+                "" 
+            ],
             "field_type": "text",
             "text_options": {
-                "valid_ws_types": [ ]
+                "valid_ws_types": [ 
+                    "KBaseGenomeAnnotations.Assembly",
+                    "KBaseSets.AssemblySet",
+                    "KBaseGenomes.Genome",
+                    "KBaseSearch.GenomeSet"
+                ]
             }
         }
     ],
@@ -31,12 +38,15 @@
                 {
                     "narrative_system_variable": "workspace",
                     "target_property": "workspace_name"
-                },{
+                },
+                {
                     "narrative_system_variable": "workspace_id",
                     "target_property": "workspace_id"
-                },{
-                    "input_parameter": "parameter_1",
-                    "target_property": "parameter_1"
+                },
+                {
+                    "input_parameter": "input_ref",
+                    "target_property": "input_ref",
+                    "target_type_transform": "resolved-ref"
                 }
             ],
             "output_mapping": [
