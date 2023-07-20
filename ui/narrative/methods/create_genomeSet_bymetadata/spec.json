@@ -207,7 +207,8 @@
                     "KBaseSets.GenomeSet",
                     "KBaseSearch.GenomeSet"
                 ]
-            }
+            },
+            "is_output_name": true
         }
     ],
     "behavior": {
@@ -227,6 +228,10 @@
                 {
                     "input_parameter": "GOLD_Ecosystem_Classification",
                     "target_property": "GOLD_Ecosystem_Classification"
+                },
+                {
+                    "input_parameter": "output_name",
+                    "target_property": "output_name"
                 }
             ],
             "output_mapping": [
