@@ -27,7 +27,7 @@ class kb_microtrait:
     ######################################### noqa
     VERSION = "0.0.1"
     GIT_URL = "https://github.com/ukaraoz/kb_microtrait.git"
-    GIT_COMMIT_HASH = "4ecf706462c45a033cba031002b083d8d4813b8f"
+    GIT_COMMIT_HASH = "83faa2ddbfd91be72cd9da5fa364ff999780dbb0"
 
     #BEGIN_CLASS_HEADER
     #END_CLASS_HEADER

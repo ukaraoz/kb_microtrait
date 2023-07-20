@@ -30,10 +30,18 @@ parameters :
         short-hint : |
             The assembly/genome collection(s) you want to run microTrait for.
 
+    variance_explained :
+        ui-name: |
+            Proportion of explained inter-guild variance
+        short-hint: |
+            Proportion of explained inter-guild variance
+        placeholder: |
+            70
+    
 description : |
     <p>microTrait maps a genome sequence into a trait space, including discrete and continuous traits, as well as simple and composite. Traits are inferred from genes and pathways representing energetic, resource acquisition, and stress tolerance mechanisms, while genome-wide signatures are used to infer composite, or life history, traits of microorganisms.</p>
 
-    publications :
+publications :
     -
         display-text: |
             microTrait source code
