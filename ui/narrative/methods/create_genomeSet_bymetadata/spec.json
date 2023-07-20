@@ -11,7 +11,7 @@
     },
     "parameters": [ 
         {
-            "id" : "GOLD_Ecosystem_Classification",
+            "id" : "aGOLD_Ecosystem_Classification",
             "optional" : false,
             "advanced" : false,
             "allow_multiple" : true,
