@@ -7,6 +7,7 @@ import sys
 import re
 import ast
 import json
+import shutil
 from decimal import Decimal
 
 from installed_clients.KBaseReportClient import KBaseReport
@@ -69,6 +70,14 @@ class microtraitUtil  :
         command = self.run_microtrait_local(microtrait_options)
 
         # 3) Package results
+        shutil.copyfile(os.path.join(self.appdir, 'data/microtrait-trait_matrixatgranularity3.txt'), os.path.join(output_dir, 'microtrait-trait_matrixatgranularity3.txt'))
+        shutil.copyfile(os.path.join(self.appdir, 'data/microtrait-trait_matrixatgranularity2.txt'), os.path.join(output_dir, 'microtrait-trait_matrixatgranularity2.txt'))
+        shutil.copyfile(os.path.join(self.appdir, 'data/microtrait-trait_matrixatgranularity1.txt'), os.path.join(output_dir, 'microtrait-trait_matrixatgranularity1.txt'))
+        shutil.copyfile(os.path.join(self.appdir, 'data/genome2guild.txt'), os.path.join(output_dir, 'genome2guild.txt'))
+        shutil.copyfile(os.path.join(self.appdir, 'data/guild2traitprofilewlegend.pdf'), os.path.join(output_dir, 'guild2traitprofilewlegend.pdf'))
+        shutil.copyfile(os.path.join(self.appdir, 'data/alltraits.cov.ward-ordered.nolegend.pdf'), os.path.join(output_dir, 'alltraits.cov.ward-ordered.nolegend.pdf'))
+        shutil.copyfile(os.path.join(self.appdir, 'data/guildsizedist.pdf'), os.path.join(output_dir, 'guildsizedist.pdf'))
+        # output_files = self._get_results_files(output_dir)
         output_files = self._get_results_files(output_dir)
         #self._write_html(os.path.join(html_dir, "microtrait.html"), 
         #                 output_files['stats_pdf']['path'])
@@ -121,17 +130,42 @@ class microtraitUtil  :
         if output_files is None:
             output_files = dict()
 
-        stats_tsv_loc = os.path.join(output_dir, 'stats.tsv')
-        output_files['stats'] = {'path': stats_tsv_loc,
-                                   'name': 'stats.tsv',
-                                   'label': 'stats.tsv',
-                                   'description': 'Results in a tab separate table format'}
-    
-        stats_pdf_loc = os.path.join(output_dir, 'stats.pdf')
-        output_files['stats_pdf'] = {'path': stats_pdf_loc,
-                                     'name': 'stats.pdf',
-                                     'label': 'stats.pdf',
-                                     'description': 'Results as a plot'}
+        trait_matrixatgranularity3_loc = os.path.join(output_dir, 'microtrait-trait_matrixatgranularity3.txt')
+        output_files['trait_matrixatgranularity3'] = {'path': trait_matrixatgranularity3_loc,
+                                 'name': 'trait_matrixatgranularity3',
+                                 'label': '',
+                                 'description': ''}
+        trait_matrixatgranularity2_loc = os.path.join(output_dir, 'microtrait-trait_matrixatgranularity2.txt')
+        output_files['trait_matrixatgranularity2'] = {'path': trait_matrixatgranularity2_loc,
+                                 'name': 'trait_matrixatgranularity2',
+                                 'label': '',
+                                 'description': ''}
+        trait_matrixatgranularity1_loc = os.path.join(output_dir, 'microtrait-trait_matrixatgranularity1.txt')
+        output_files['trait_matrixatgranularity1'] = {'path': trait_matrixatgranularity1_loc,
+                                 'name': 'trait_matrixatgranularity1',
+                                 'label': '',
+                                 'description': ''}
+        genome2guild_loc = os.path.join(output_dir, 'genome2guild.txt')
+        output_files['genome2guild'] = {'path': genome2guild_loc,
+                                 'name': 'genome2guild',
+                                 'label': '',
+                                 'description': ''}
+        guild2traitprofilewlegend_loc = os.path.join(output_dir, 'guild2traitprofilewlegend.pdf')
+        output_files[' guild2traitprofilewlegend'] = {'path': guild2traitprofilewlegend_loc,
+                                 'name': 'guild2traitprofilewlegend',
+                                 'label': '',
+                                 'description': ''}
+        alltraitscovariance_loc = os.path.join(output_dir, 'alltraits.cov.ward-ordered.nolegend.pdf')
+        output_files[' alltraitscovariance'] = {'path': alltraitscovariance_loc,
+                                 'name': 'alltraitscovariance',
+                                 'label': '',
+                                 'description': ''}
+        guildsizedist_loc = os.path.join(output_dir, 'guildsizedist.pdf')
+        output_files[' guildsizedist'] = {'path': guildsizedist_loc,
+                                 'name': 'guildsizedist',
+                                 'label': '',
+                                 'description': ''}
+
         return output_files
 
     def _write_html(self, html_path, pdf_file):

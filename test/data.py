@@ -38,6 +38,6 @@ TEST_DATA_OBJECTS = {
     'assemblyset_object': [ '71444/66/1' ],
     'assemblyset_object_large119': [ '71444/310/1' ],
     'genomeset_object': [ '71444/68/1' ],
-    'genomeset_object_small': [ '71444/70/1' ]
+    'genomeset_object_small': [ '71444/70/2' ]
 }
 
