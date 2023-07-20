@@ -7,7 +7,7 @@
     "categories": ["active", "communities", "annotation"],
     "widgets": {
         "input": null,
-        "output": null
+        "output": "no-display"
     },
     "parameters": [ 
         {
@@ -33,7 +33,7 @@
         "service-mapping": {
             "url": "",
             "name": "kb_microtrait",
-            "method": "run_kb_microtrait",
+            "method": "run_microtrait",
             "input_mapping": [
                 {
                     "narrative_system_variable": "workspace",
@@ -53,9 +53,14 @@
                 {
                     "service_method_output_path": [0,"report_name"],
                     "target_property": "report_name"
-                },{
+                },
+                {
                     "service_method_output_path": [0,"report_ref"],
                     "target_property": "report_ref"
+                },
+                {
+                    "narrative_system_variable": "workspace",
+                    "target_property": "workspace_name"
                 }
             ]
         }

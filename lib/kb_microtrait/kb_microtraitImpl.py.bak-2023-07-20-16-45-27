@@ -27,7 +27,7 @@ class kb_microtrait:
     ######################################### noqa
     VERSION = "0.0.1"
     GIT_URL = "https://github.com/ukaraoz/kb_microtrait.git"
-    GIT_COMMIT_HASH = "b6c0c38c87b7edf311403423d15ab712e8cced46"
+    GIT_COMMIT_HASH = "99a8c91e8630470b8b2bb483238b2f18b6e117b9"
 
     #BEGIN_CLASS_HEADER
     #END_CLASS_HEADER
@@ -106,26 +106,26 @@ class kb_microtrait:
         # return the results
         return [result]
 
-    def create_genomeSet_bymetadata(self, ctx, params):
+    def Batch_Create_GenomeSet_bymetadata(self, ctx, params):
         """
-        :param params: instance of type "create_genomeSet_bymetadataParams"
-           (create_genomeSet_bymetadata() ** **  Method for creating a
+        :param params: instance of type
+           "Batch_Create_GenomeSet_bymetadataParams"
+           (Batch_Create_GenomeSet_bymetadata() ** **  Method for creating a
            GenomeSet by metadata) -> structure: parameter "workspace_name" of
            String, parameter "name_pattern" of String, parameter
-           "GOLD_Ecosystem_Classification" of String, parameter "desc" of
-           String
-        :returns: instance of type "create_genomeSet_bymetadataOutput" ->
-           structure: parameter "report_name" of String, parameter
+           "output_name" of String, parameter "desc" of String
+        :returns: instance of type "Batch_Create_GenomeSet_bymetadataOutput"
+           -> structure: parameter "report_name" of String, parameter
            "report_ref" of String
         """
         # ctx is the context object
         # return variables are: returnVal
-        #BEGIN create_genomeSet_bymetadata
-        #END create_genomeSet_bymetadata
+        #BEGIN Batch_Create_GenomeSet_bymetadata
+        #END Batch_Create_GenomeSet_bymetadata
 
         # At some point might do deeper type checking...
         if not isinstance(returnVal, dict):
-            raise ValueError('Method create_genomeSet_bymetadata return value ' +
+            raise ValueError('Method Batch_Create_GenomeSet_bymetadata return value ' +
                              'returnVal is not type dict as required.')
         # return the results
         return [returnVal]
