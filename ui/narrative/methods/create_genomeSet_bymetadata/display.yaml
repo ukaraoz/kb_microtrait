@@ -1,0 +1,57 @@
+#
+# define display information
+#
+name: Create Genome Set by metadata
+tooltip: |
+    Allows user to create a GenomeSet without specifying names
+screenshots: []
+
+icon: kb-orange.png
+
+#
+# define a set of similar methods that might be useful to the user
+#
+suggestions:
+    apps:
+        related:
+            []
+        next:
+            []
+    methods:
+        related:
+            []
+        next:
+            []
+
+#
+# Configure the display and description of parameters
+#
+parameters :
+    GOLD_Ecosystem_Classification:
+        ui-name : |
+            Name Pattern
+        short-hint : |
+            Optionally define a pattern to match in the object names
+    output_name:
+        ui-name : |
+            Output GenomeSet Name
+        short-hint : |
+            Name for the Output GenomeSet Collection
+
+
+description : |
+    <p>This App allows the user to group individual <b><i>Genome</i></b> objects into a <b><i>Genome Set</i></b>.</p>
+    <p>
+    <h3>Description</h3>
+    <b>Batch Create Genome Set</b> allows a user to create a Set of Genomes which can be used in subsequent Apps that operate on Genome Sets.  Each Genome object must already be within the Narrative's data workspace, so if there are genomes from other Narratives or genomes from the public reference genome library that the user wishes to include, they must first be imported into the active Narrative.  All Genomes that match the <i>Name Pattern</i> will be included in the Set.  If the <i>Name Pattern</i> is left blank, all genome objects in the current Narrative will be included.
+    </p>
+    <p>Example allowed <i>Name Patterns</i>:<br>
+    <ul>
+    <li> <b>*.Genome</b>
+    <li> <b>Sample_1-*</b>
+    <li> <b>Sample_1-*.Genome</b>
+    </ul>
+    </p>
+
+    <p><strong>Team members who developed &amp; deployed App in KBase:</strong> <a href="https://narrative.kbase.us/#people/dylan">Dylan Chivian</a>. For questions, please <a href=”http://www.kbase.us/support/”>contact us</a>.</p>
+

@@ -52,4 +52,22 @@ module kb_microtrait {
     funcdef run_microtrait(microtraitParams params)
         returns (microtraitResult result) authentication required;
 
+    /* create_genomeSet_bymetadata()
+    **
+    **  Method for creating a GenomeSet by metadata
+    */
+    typedef structure {
+        string workspace_name;
+        string name_pattern;
+        string GOLD_Ecosystem_Classification;
+        string desc;
+    } create_genomeSet_bymetadataParams;
+
+    typedef structure {
+        string report_name;
+        string report_ref;
+    } create_genomeSet_bymetadataOutput;
+
+    funcdef create_genomeSet_bymetadata (create_genomeSet_bymetadataParams params) returns (create_genomeSet_bymetadataOutput) authentication required;
+
 };

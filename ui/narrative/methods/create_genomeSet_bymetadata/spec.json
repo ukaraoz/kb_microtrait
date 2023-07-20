@@ -1,0 +1,61 @@
+{
+    "ver": "0.0.1",
+    "authors": [
+        "ukaraoz"
+    ],
+    "contact": "",
+    "categories": ["active"],
+    "widgets": {
+        "input": null,
+        "output": null
+    },
+    "parameters": [ 
+        {
+            "id" : "GOLD_Ecosystem_Classification",
+            "optional" : false,
+            "advanced" : false,
+            "allow_multiple" : false,
+            "default_values" : [ "none" ],
+            "field_type" : "dropdown",
+            "dropdown_options":{
+              "options": [
+                {"value": "Environmental__Terrestrial__Soil-bedrock interface__Unclassified__Unclassified", "display": "Environmental:Terrestrial:Soil-bedrock interface:Unclassified:Unclassified"},
+                {"value": "Environmental__Terrestrial__Soil__Agricultural land__Bulk soil", "display": "Environmental:Terrestrial:Soil:Agricultural land:Bulk soil"},
+                {"value": "Environmental__Terrestrial__Soil__Agricultural land__Unclassified", "display": "Environmental:Terrestrial:Soil:Agricultural land:Unclassified"},
+                {"value": "Environmental__Terrestrial__Soil__Alpine__Unclassified", "display": "Environmental:Terrestrial:Soil:Alpine:Unclassified"}
+              ]
+            }
+        }
+    ],
+    "behavior": {
+        "service-mapping": {
+            "url": "",
+            "name": "kb_microtrait",
+            "method": "create_genomeSet_bymetadata",
+            "input_mapping": [
+                {
+                    "narrative_system_variable": "workspace",
+                    "target_property": "workspace_name"
+                },
+                {
+                    "narrative_system_variable": "workspace_id",
+                    "target_property": "workspace_id"
+                },
+                {
+                    "input_parameter": "GOLD_Ecosystem_Classification",
+                    "target_property": "GOLD_Ecosystem_Classification"
+                }
+            ],
+            "output_mapping": [
+                {
+                    "service_method_output_path": [0,"report_name"],
+                    "target_property": "report_name"
+                },{
+                    "service_method_output_path": [0,"report_ref"],
+                    "target_property": "report_ref"
+                }
+            ]
+        }
+    },
+    "job_id_output_field": "docker"
+}

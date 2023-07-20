@@ -58,6 +58,21 @@ class kb_microtrait(object):
         return self._client.call_method('kb_microtrait.run_microtrait',
                                         [params], self._service_ver, context)
 
+    def Batch_Create_GenomeSet_bymetadata(self, params, context=None):
+        """
+        :param params: instance of type
+           "Batch_Create_GenomeSet_bymetadataParams"
+           (Batch_Create_GenomeSet_bymetadata() ** **  Method for creating a
+           GenomeSet by metadata) -> structure: parameter "workspace_name" of
+           String, parameter "name_pattern" of String, parameter
+           "output_name" of String, parameter "desc" of String
+        :returns: instance of type "Batch_Create_GenomeSet_bymetadataOutput"
+           -> structure: parameter "report_name" of String, parameter
+           "report_ref" of String
+        """
+        return self._client.call_method('kb_microtrait.Batch_Create_GenomeSet_bymetadata',
+                                        [params], self._service_ver, context)
+
     def status(self, context=None):
         return self._client.call_method('kb_microtrait.status',
                                         [], self._service_ver, context)

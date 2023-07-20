@@ -346,6 +346,10 @@ class Application(object):
                              name='kb_microtrait.run_microtrait',
                              types=[dict])
         self.method_authentication['kb_microtrait.run_microtrait'] = 'required'  # noqa
+        self.rpc_service.add(impl_kb_microtrait.Batch_Create_GenomeSet_bymetadata,
+                             name='kb_microtrait.Batch_Create_GenomeSet_bymetadata',
+                             types=[dict])
+        self.method_authentication['kb_microtrait.Batch_Create_GenomeSet_bymetadata'] = 'required'  # noqa
         self.rpc_service.add(impl_kb_microtrait.status,
                              name='kb_microtrait.status',
                              types=[dict])
