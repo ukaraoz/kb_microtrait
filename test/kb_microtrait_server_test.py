@@ -66,7 +66,7 @@ class kb_microtraitTest(unittest.TestCase):
 
         cls.scratch = cls.cfg['scratch']
         cls.appdir = cls.cfg['appdir']
-
+        
         cls.test_data_dir = os.path.join(cls.scratch, 'test_data')
         cls.suffix = test_time_stamp
         #cls.microtrait_runner = microtraitUtil(cls.cfg, cls.ctx)

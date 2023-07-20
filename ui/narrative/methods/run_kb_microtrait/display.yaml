@@ -1,7 +1,7 @@
 #
 # define display information
 #
-name: Extract microbial traits with microTrait
+name: Extract microbial fitness traits with microTrait
 
 tooltip: |
     Extract microbial trait matrix from your assemblies, isolate genomes, or MAGs.
