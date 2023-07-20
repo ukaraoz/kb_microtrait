@@ -7,7 +7,7 @@
     "categories": ["active", "util"],
     "widgets": {
         "input": null,
-        "output": null
+        "output": "no-display"
     },
     "parameters": [ 
         {
@@ -193,7 +193,8 @@
                 {"value": "Environmental__Terrestrial__Soil__Wetlands__Unclassified", "display": "Environmental:Terrestrial:Soil:Wetlands:Unclassified"},
                 {"value": "Environmental__Terrestrial__Subsurface__Sediment__Unclassified", "display": "Environmental:Terrestrial:Subsurface:Sediment:Unclassified"}
               ]
-            }
+            },
+            "is_output_name": false
         },
         {
             "id": "output_name",
