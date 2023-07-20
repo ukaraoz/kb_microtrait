@@ -4,7 +4,7 @@
         "ukaraoz"
     ],
     "contact": "",
-    "categories": ["active"],
+    "categories": ["active", "util"],
     "widgets": {
         "input": null,
         "output": null
