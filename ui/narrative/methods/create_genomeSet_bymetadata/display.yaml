@@ -1,12 +1,12 @@
 #
 # define display information
 #
-name: Create Genome Set by metadata
+name: Create Genome Set by GOLD Ecosystem
 tooltip: |
     Allows user to create a GenomeSet without specifying names
 screenshots: []
 
-icon: kb-orange.png
+icon: genomebymetadata_AppIcon.png
 
 #
 # define a set of similar methods that might be useful to the user
