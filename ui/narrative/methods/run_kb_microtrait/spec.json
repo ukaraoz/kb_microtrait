@@ -4,7 +4,7 @@
         "ukaraoz"
     ],
     "contact": "",
-    "categories": ["active", "temp"],
+    "categories": ["active", "communities", "annotation"],
     "widgets": {
         "input": null,
         "output": null
